@@ -4,5 +4,5 @@ cat << EOF
 ---
  
 default_process_types:
-  hellheroku_basho: ./heroku_bash.sh
+  heroku_bash: ./heroku_bash.sh
 EOF

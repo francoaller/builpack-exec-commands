@@ -6,11 +6,11 @@ indent() {
 
 echo "-----> Found a heroku_bash.sh"
 
-if [ ! -s $1/heroku_bash.s ]; then
-  echo "hello.txt was empty"
+if [ ! -s $1/heroku_bash.sh ]; then
+  echo "heroku_bash.sh was empty"
   exit 1
 else
-  echo "hello.txt is not empty, here are the contents" | indent
+  echo "heroku_bash.shis not empty, here are the contents" | indent
   cd $1
-  ./heroku_bash.s
+  ./heroku_bash.sh
 fi | indent
