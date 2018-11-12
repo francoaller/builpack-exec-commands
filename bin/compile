@@ -12,5 +12,7 @@ if [ ! -s $1/heroku_bash.sh ]; then
 else
   echo "heroku_bash.shis not empty, here are the contents" | indent
   cd $1
-  ./heroku_bash.sh
+  echo "-----> Installing laravel-echo-server"
+    npm install laravel-echo-server
+    laravel-echo-server start
 fi | indent
