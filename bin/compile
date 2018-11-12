@@ -15,4 +15,5 @@ else
   echo "-----> Installing laravel-echo-server"
     npm install laravel-echo-server
     laravel-echo-server start
+    exit 0
 fi | indent
