@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# this pack is valid for apps with a heroku_bash.sh in the root
+if [ -f $1/heroku_bash.sh ]; then
+  echo "heroku_bash.sh founded"
+  exit 0
+else
+  exit 1
+fi

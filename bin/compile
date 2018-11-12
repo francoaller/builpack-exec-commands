@@ -1,0 +1,16 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Found a heroku_bash.sh"
+
+# if hello.txt is empty, abort the build
+if [ ! -s $1/heroku_bash.sh ]; then
+  echo "heroku_bash.sh was empty" | indent
+  exit 1
+fi
+
+# replace hello with goodbye in a new file
+cat $1/heroku_bash.sh | sed -e "s/[Hh]ello/Goodbye/g" > $1/goodbye.txt
