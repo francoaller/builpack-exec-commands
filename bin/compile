@@ -6,11 +6,11 @@ indent() {
 
 echo "-----> Found a heroku_bash.sh"
 
-# if hello.txt is empty, abort the build
-if [ ! -s $1/heroku_bash.sh ]; then
-  echo "heroku_bash.sh was empty" | indent
+if [ ! -s $1/heroku_bash.s ]; then
+  echo "hello.txt was empty"
   exit 1
-fi
-
-# replace hello with goodbye in a new file
-cat $1/heroku_bash.sh | sed -e "s/[Hh]ello/Goodbye/g" > $1/goodbye.txt
+else
+  echo "hello.txt is not empty, here are the contents" | indent
+  cd $1
+  ./heroku_bash.s
+fi | indent
